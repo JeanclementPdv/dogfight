@@ -37,9 +37,28 @@ public class EventPerformer implements IEventPerformer{
 			
 			case KeyEvent.VK_LEFT:
 				return new UserOrder(1, Order.LEFT); 
-		}
-		return null;
-		
+				
+			case KeyEvent.VK_NUMPAD8:
+				return new UserOrder(1, Order.SHOOT); 
+				
+			case KeyEvent.VK_S:
+				return new UserOrder(2, Order.DOWN); 
+				
+			case KeyEvent.VK_Z:
+				return new UserOrder(2, Order.UP);
+			
+			case KeyEvent.VK_D:
+				return new UserOrder(2, Order.RIGHT); 
+			
+			case KeyEvent.VK_Q:
+				return new UserOrder(2, Order.LEFT); 
+			
+			case KeyEvent.VK_T:
+				return new UserOrder(2, Order.SHOOT); 
+			
+			default :
+				return new UserOrder(2, Order.NOP);
+		}	
 		
 	}
 }

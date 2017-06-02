@@ -6,6 +6,7 @@ import java.awt.image.ImageObserver;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
+import jpu2016.dogfight.model.Sky;
 import jpu2016.gameframe.IGraphicsBuilder;
 
 public class GraphicsBuilder implements IGraphicsBuilder{
@@ -20,7 +21,8 @@ public class GraphicsBuilder implements IGraphicsBuilder{
 	}
 	
 	private void buildEmptySky(){
-		
+		Graphics g;
+		g.drawImage(this.dogfightModel.getIArea().getImage(),0,0,null);
 	}
 	
 	private void drawMobile(IMobile mobile, Graphics g, ImageObserver observer){
@@ -29,20 +31,26 @@ public class GraphicsBuilder implements IGraphicsBuilder{
 
 	@Override
 	public void applyModelToGraphic(Graphics g, ImageObserver observer) {
-		// TODO Auto-generated method stub
+		buildEmptySky();
 		
 	}
 
 	@Override
 	public int getGlobalWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		int result;
+		
+		result = this.dogfightModel.getIArea().getDimension().getWidth();
+		
+		return result;
 	}
 
 	@Override
 	public int getGlobalHeight() {
-		// TODO Auto-generated method stub
-		return 0;
+		int result;
+		
+		result = this.dogfightModel.getIArea().getDimension().getHeight();
+		
+		return result;
 	}
 	
 }
