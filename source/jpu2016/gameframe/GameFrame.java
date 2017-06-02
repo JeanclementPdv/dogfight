@@ -6,30 +6,44 @@ import java.util.Observable;
 
 import javax.swing.JFrame;
 
+import jpu2016.javapetri.ihm.EasyPanel;
+import jpu2016.javapetri.ihm.JavaPetriGraphicsBuilder;
+
 public class GameFrame extends JFrame implements KeyListener {
 
 	private IEventPerformer eventPerformer;
 	
-	public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder gaphicBuilder, Observable observable){
+	public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicBuilder, Observable observable){
 		
+		this.setTitle(title);
+		this.setSize(400,400);              
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.eventPerformer = performer;
+	    GamePanel panel = new GamePanel(graphicBuilder);
+	    
+	    observable.addObserver(panel);
+	    
+	    this.setContentPane(panel);
 	}
 
 	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyPressed(KeyEvent event) {
+		
+		this.eventPerformer.eventPerform(event);
 		
 	}
 
 	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyReleased(KeyEvent event) {
+		
+		this.eventPerformer.eventPerform(event);
 		
 	}
 
 	@Override
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyTyped(KeyEvent event) {
+		
+		this.eventPerformer.eventPerform(event);
 		
 	}
 }

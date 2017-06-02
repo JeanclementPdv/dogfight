@@ -20,8 +20,8 @@ public class EventPerformer implements IEventPerformer{
 		
 	}
 	
-	/*private UserOrder keyCodeToUserOrder(int keyCode){
+	private UserOrder keyCodeToUserOrder(int keyCode){
 		
 		return new UserOrder(keyCode, keyCode); 
-	}*/
+	}
 }
