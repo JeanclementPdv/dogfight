@@ -1,4 +1,4 @@
-package jpu2016.dogfight.model;
+package jpu2016.dogfight.models;
 
 public interface IMobile {
 	
