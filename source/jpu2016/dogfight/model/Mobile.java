@@ -1,4 +1,4 @@
-package jpu2016.dogfight.models;
+package jpu2016.dogfight.model;
 
 public abstract class Mobile {
 	

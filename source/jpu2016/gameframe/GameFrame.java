@@ -6,9 +6,6 @@ import java.util.Observable;
 
 import javax.swing.JFrame;
 
-import jpu2016.javapetri.ihm.EasyPanel;
-import jpu2016.javapetri.ihm.JavaPetriGraphicsBuilder;
-
 public class GameFrame extends JFrame implements KeyListener {
 
 	private IEventPerformer eventPerformer;
