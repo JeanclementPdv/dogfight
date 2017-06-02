@@ -3,6 +3,7 @@ package jpu2016.dogfight.view;
 import java.awt.event.KeyEvent;
 
 import jpu2016.dogfight.controller.IOrderPerformer;
+import jpu2016.dogfight.controller.Order;
 import jpu2016.dogfight.controller.UserOrder;
 import jpu2016.gameframe.IEventPerformer;
 
@@ -16,12 +17,29 @@ public class EventPerformer implements IEventPerformer{
 
 	@Override
 	public void eventPerform(KeyEvent keyCode) {
-		// TODO Auto-generated method stub
+		
+		keyCodeToUserOrder(keyCode.getKeyCode());
 		
 	}
 	
 	private UserOrder keyCodeToUserOrder(int keyCode){
 		
-		return new UserOrder(keyCode, keyCode); 
+		switch (keyCode){
+		
+			case KeyEvent.VK_DOWN:
+				return new UserOrder(1, Order.DOWN); 
+				
+			case KeyEvent.VK_UP:
+				return new UserOrder(1, Order.UP);
+			
+			case KeyEvent.VK_RIGHT:
+				return new UserOrder(1, Order.RIGHT); 
+			
+			case KeyEvent.VK_LEFT:
+				return new UserOrder(1, Order.LEFT); 
+		}
+		return null;
+		
+		
 	}
 }

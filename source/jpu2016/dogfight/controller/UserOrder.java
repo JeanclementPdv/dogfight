@@ -6,7 +6,7 @@ public class UserOrder implements IUserOrder {
 
 	private int player;
 
-	public UserOrder(int player, int order) {
+	public UserOrder(int player, Order order) {
 	}
 
 	public Order getOrder() {
