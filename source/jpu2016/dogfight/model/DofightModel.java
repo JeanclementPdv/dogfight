@@ -6,18 +6,14 @@ public class DofightModel {
 		// TODO Auto-generated constructor stub
 		
 	public	IArea getIArea(){
-		
-		return IArea ;
-		
-			
 		}; 
 		
-	public void buildArea(  Dimension dimension){
+	public void buildArea(Dimension dimension){
 		
 		
 	};
 	
-	public void addMobile( IMobile Mobile){
+	public void addMobile(IMobile Mobile){
 		
 	};
 	public void removeMobile(IMobile Mobile){
@@ -27,7 +23,13 @@ public class DofightModel {
 		
 	};
 	
-	public getIMobileByPlayer(int player)
+	public IMobile getIMobileByPlayer(int player){
+		
+	};
+	public void setMobilesHavesMoved(){
+		
+	};
+	
 	
 	
 		

@@ -18,7 +18,13 @@ public class Missile extends Mobile{
 	public int getHeightWithADiirection(Direction direction){
 		
 	};
-	
+	public void move(){
+		
+	};
+	public boolean isWeapon(){
+		return false;
+		
+	};
 	
 
 }
